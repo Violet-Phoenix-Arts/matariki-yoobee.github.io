@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matariki CHCH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodymain">
+    <div class="header0">
+        <a target="_self" href="index.html">
+        <img class="himg" src="imgs\Matariki 1-2-03.png">
+        </a>
+    </div>
+    <div class="menuheader0">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/map.html">Map</a></li>
+            <li><a href="pages/venue.html">Venue</a></li>
+            <li><a href="pages/timetable.html">Timetable</a></li>
+        </ul>
+    </div>
+<div class="mainbox">
+    <div class="maintextbox">
+        <h1 class="header1">
+            Matariki at the Christchurch Botanic Gardens
+        </h1>
+        <br>
+        <p class="info">
+            Join us at the botanic gardens from the <b>10th to the 12th of July</b> for some Matariki fun! 
+        <br>
+        <br>
+            <b>From 4pm til 10pm</b> there will be a series of performances, live traditional music, and food trucks/stalls located all around the gardens. 
+        <br>
+        <br>
+            With 4 main stages set around the garden, you’ll never be far from the action. Between the stages, there will be plenty of food trucks and light installations to feast both your eyes and your puku.
+        </p>
+        <br>
+        <br>
+        <br>
+        <p class="info">
+            You can find the map for this event <a class="pages" href="pages/map.html">here</a>
+        </p>
+        <br>
+        <p class="info">
+            You can find the timetable for this event <a class="pages" href="pages/timetable.html">here</a>
+        </p>
+        <br>
+        <p class="info">
+            You can find more info for the venue <a class="pages" href="pages/venue.html">here</a>
+        </p>
+    </div>
+    <div class="mainimgbox">
+        <div class="slide fade">
+            <img class="imgmain" src="imgs\fountainf.png" alt="botanic gardens img">
+        </div>
+        <div class="slide fade">
+            <img class="imgmain" src="imgs\fountains.png" alt="botanic gardens img">
+        </div>
+        <div class="slide fade">
+            <img class="imgmain" src="imgs\rose.png" alt="botanic gardens img">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</br>
+<footer class="footbox">
+    Website design by VioletPhoenix
+</footer>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</div>
+</body>
+</html>
